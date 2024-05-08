@@ -24,10 +24,7 @@
 </script>
 
 <template>
-	<h1 class="text-center">
-	prova
-	</h1>
-	<div>
+	<div class="container my-3" >
 		<AppHeader/>
 	</div>
 	<div>
