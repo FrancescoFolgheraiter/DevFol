@@ -1,35 +1,24 @@
-<script>
-//importazione app
-import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
-import AppFooter from './components/AppFooter.vue';
-
-export default{
-	data() {
-		return{
-
-		};
-	},
-	components:{
-		AppHeader,
-		AppMain,
-		AppFooter
-	},
-	methods:{
-
-	}
-}
-
+<script setup>
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-	<h1>My template Vite Vue Sass</h1>
-	<AppHeader/>
-	<AppMain/>
-	<AppFooter/>
+<h1 class="text-center">
+  prova
+</h1>
 </template>
 
-<style lang="scss" scoped>
-@use"assets/scss/main.scss" as *;
-@import "assets/scss/partials/reset.scss";
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
+}
 </style>
