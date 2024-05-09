@@ -5,20 +5,49 @@
             return{
                 //my knowledge
                 technologies:[
-                    "HTML 5",
-                    "CSS/SCSS",
-                    "Bootstrap 5",
-                    "Javascript",
-                    "Vue",
-                    "PHP",
-                    "Laravel",
-                    "MySQL",
-                    "Git"
+                    {
+                        name: "HTML 5",
+                        image: "/img/icons-tech/html5_icon.png"
+                    },
+                    {
+                        name: "CSS/SCSS",
+                        image: "/img/icons-tech/css_icon.png" 
+                    },
+                    {
+                        name: "Bootstrap 5",
+                        image: "/img/icons-tech/bootstrap5_icon.png" 
+                    },
+                    {
+                        name: "Javascript",
+                        image: "/img/icons-tech/javascript_icon.png"
+                    },
+                    {
+                        name: "Vue",
+                        image: "/img/icons-tech/vue.png"
+                    },
+                    {
+                        name: "PHP",
+                        image: "/img/icons-tech/php_icon.png" 
+                    },
+                    {
+                        name: "Laravel",
+                        image: "/img/icons-tech/laravel_icon.png"
+                    },
+                    {
+                        name: "MySQL",
+                        image: "/img/icons-tech/mySql_icon.png" 
+                    },
+                    {
+                        name: "Git",
+                        image: "/img/icons-tech/git_icon.png" 
+                    }
                 ]
             };
         },
         methods:{
-
+            getImagePath(imgPath){
+			return new URL (imgPath, import.meta.url).href;
+		    }
         },
         components:{
 
@@ -55,7 +84,8 @@
         <div class="bg-gray-200 p-4 text-center">
             <ul class="grid grid-cols-3 gap-2">
                 <li v-for="technology in technologies">
-                    {{ technology }}
+                    {{ technology.name }}
+                    <img :src="getImagePath(technology.image)"  :alt="technology.name"> 
                 </li>
             </ul>
         </div>
