@@ -10,6 +10,10 @@ export default {
       center: true,
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
+
+
 

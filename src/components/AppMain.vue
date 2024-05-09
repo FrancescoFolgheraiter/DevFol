@@ -11,7 +11,7 @@
 </script>
 
 <template>
-    {{ text }}
+    <router-view></router-view>
 </template>
 
 <style >

@@ -27,14 +27,15 @@
 	<div class="container my-3" >
 		<AppHeader/>
 	</div>
-	<div>
+	<div class="container">
 		<AppMain/>
 	</div>
-	<div>
+	<div class="container">
 		<AppFooter/>
 	</div>
 </template>
 
 <style scoped>
+    
 
 </style>
