@@ -6,7 +6,7 @@
                 //my knowledge
                 technologies:[
                     {
-                        name: "HTML 5",
+                        name: "HTML5",
                         image: "/img/icons-tech/html5_icon.png"
                     },
                     {
@@ -14,7 +14,7 @@
                         image: "/img/icons-tech/css_icon.png" 
                     },
                     {
-                        name: "Bootstrap 5",
+                        name: "Bootstrap5",
                         image: "/img/icons-tech/bootstrap5_icon.png" 
                     },
                     {
@@ -46,7 +46,7 @@
         },
         methods:{
             getImagePath(imgPath){
-			return new URL (imgPath, import.meta.url).href;
+			    return new URL (imgPath, import.meta.url).href;
 		    }
         },
         components:{
@@ -61,7 +61,7 @@
     <section class="grid grid-cols-2 gap-4 mb-4">
         <div class="bg-gray-200 p-4 text-center">
             <p>Ciao! Piacere di conoscerti 👋</p>
-            <h1 class="text-base sm:text-xl font-semibold sm:font-normal">
+            <h1 class=" text-4xl font-bold">
                 Sono Francesco, un full-stack web developer di Trento(IT).
             </h1>
         </div>
@@ -81,18 +81,35 @@
         <div class="bg-gray-200 p-4 text-center">
             knowledge
         </div>
-        <div class="bg-gray-200 p-4 text-center">
+        <div class="bg-gray-200 p-4 ">
             <ul class="grid grid-cols-3 gap-2">
-                <li v-for="technology in technologies">
-                    {{ technology.name }}
-                    <img :src="getImagePath(technology.image)"  :alt="technology.name"> 
+                <li v-for="technology in technologies" class="border-2 border-black rounded flex flex-col items-center">
+                    <div class="self-center">
+                        {{ technology.name }}
+                    </div>
+                    <div class="items-center">
+                        <img :src="getImagePath(technology.image)"  :alt="technology.name"> 
+                    </div>
                 </li>
             </ul>
+        </div>
+    </section>
+    <section class="grid grid-cols-2 gap-4 mb-4">
+        <div class="bg-gray-200 p-4 text-center">
+            Focus on:
+        </div>
+        <div class="bg-gray-200 p-4 text-center">
+            Sto studiando Java con i 
         </div>
     </section>
 </template>
 
 <style scoped>
-    
+    li>div{
+        max-width: 50px;
+    }
+    li>div>img{
+        width: 100%;
+    }
 
 </style>
