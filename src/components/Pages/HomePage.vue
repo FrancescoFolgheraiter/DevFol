@@ -61,8 +61,8 @@
     <section class="grid grid-cols-2 gap-4 mb-4">
         <div class="bg-gray-200 p-4 text-center">
             <p>Ciao! Piacere di conoscerti 👋</p>
-            <h1 class=" text-4xl font-bold">
-                Sono Francesco, un full-stack web developer di Trento(IT).
+            <h1 class=" text-4xl font-bold text-right">
+                Sono Francesco, un full-stack <span class="text-orange-500">web developer</span> di Trento(IT).
             </h1>
         </div>
         <div class="bg-gray-200 p-4 text-center">
@@ -82,16 +82,18 @@
             knowledge
         </div>
         <div class="bg-gray-200 p-4 ">
-            <ul class="grid grid-cols-3 gap-2">
-                <li v-for="technology in technologies" class="border-2 border-black rounded flex flex-col items-center">
-                    <div class="self-center">
+            <!--My card technology-->
+            <ul class="grid grid-cols-3 gap-4 ">
+                <li v-for="(technology, i) in technologies" :key="i" class=" min-h-[120px] border-2 border-green-800 rounded flex flex-col items-center justify-around ring-4 ring-lime-500 bg-gradient-to-bl from-green-400 to-green-100">
+                    <div class=" text-lg font-semibold text-slate-600">
                         {{ technology.name }}
                     </div>
-                    <div class="items-center">
-                        <img :src="getImagePath(technology.image)"  :alt="technology.name"> 
+                    <div class=" w-[50px]">
+                        <img class=" w-full" :src="getImagePath(technology.image)"  :alt="technology.name"> 
                     </div>
                 </li>
             </ul>
+            <!--end card tech-->
         </div>
     </section>
     <section class="grid grid-cols-2 gap-4 mb-4">
@@ -105,11 +107,6 @@
 </template>
 
 <style scoped>
-    li>div{
-        max-width: 50px;
-    }
-    li>div>img{
-        width: 100%;
-    }
+
 
 </style>
