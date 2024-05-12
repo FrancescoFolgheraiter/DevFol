@@ -107,12 +107,29 @@ import { EffectCards } from 'swiper/modules';
                 class="mySwiper"
             >
                 <swiper-slide>
-                    <img class="" :src="getImagePath('/img/photo/Franz.jpg')" alt="">
+                    <img class="w-full h-full object-cover" :src="getImagePath('/img/photo/Segonzano.jpeg')" alt="">
                 </swiper-slide>
-                <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-                <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-                <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-                <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+                <swiper-slide>
+                    <img class="w-full h-full object-cover" :src="getImagePath('/img/photo/ArteSella.jpeg')" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="w-full h-full object-cover" :src="getImagePath('/img/photo/BrisaC.jpeg')" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="w-full h-full object-cover" :src="getImagePath('/img/photo/extreameD.jpeg')" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="w-full h-full object-cover" :src="getImagePath('/img/photo/Samba.jpeg')" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="w-full h-full object-cover" :src="getImagePath('/img/photo/BoulderLona.jpeg')" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="w-full h-full object-cover" :src="getImagePath('/img/photo/Clover.jpeg')" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="w-full h-full object-cover" :src="getImagePath('/img/photo/Gatti.jpeg')" alt="">
+                </swiper-slide>
             </swiper>
         </div>
         <div class="bg-gray-200 p-4 text-center text-xl ">
@@ -201,6 +218,7 @@ import { EffectCards } from 'swiper/modules';
     border:1px solid black;
 }
 
+
 .swiper-slide:nth-child(2n) {
   background-color: rgb(0, 140, 255);
 }
@@ -228,15 +246,5 @@ import { EffectCards } from 'swiper/modules';
 .swiper-slide:nth-child(8n) {
   background-color: rgb(0, 68, 255);
 }
-
-.swiper-slide:nth-child(9n) {
-  background-color: rgb(218, 12, 218);
-}
-
-.swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
-}
-
-
 
 </style>
