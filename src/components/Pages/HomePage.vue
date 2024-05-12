@@ -88,7 +88,7 @@ import { EffectCards } from 'swiper/modules';
         <div class="bg-gray-200 p-4 text-center flex justify-center">
             <!--polaroid-->
             <div class="p-3 max-w-[300px] rotate-12 m-12 border-4 border-black shadow-black shadow-xl bg-white">
-                <img class="w-full border-4 border-black" :src="getImagePath('/img/photo/Franz.jpg')" alt="">
+                <img class="w-full border-4 border-black" :src="getImagePath('/img/photo/Franz.jpg')" alt="FrancescoFolgheraiter">
                 <div class="p-8 ">
                     Yep it's me!
                 </div>
@@ -106,7 +106,9 @@ import { EffectCards } from 'swiper/modules';
                 :modules="modules"
                 class="mySwiper"
             >
-                <swiper-slide>Slide 1</swiper-slide>
+                <swiper-slide>
+                    <img class="" :src="getImagePath('/img/photo/Franz.jpg')" alt="">
+                </swiper-slide>
                 <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
                 <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
                 <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
@@ -162,12 +164,18 @@ import { EffectCards } from 'swiper/modules';
     <!--fourth section what im focus on-->
     <section class="grid grid-cols-2 gap-4 mb-12">
         <div class="bg-gray-200 p-4 text-center">
-            Focus on:
+            <p>
+                In questo periodo i miei studi si stanno principalmente
+                concentrando sul linguaggio di programmazione Java (OOP) e 
+                Tailwind come framework CSS e successivamente mi concentrerò sul framework
+                di Java Spring.
+            </p>
+            <p>
+                Con tailwild è stato amore a prima vista!
+            </p>    
         </div>
         <div class="bg-gray-200 p-4 text-center">
-            In questo periodo sto studiando linguaggio di programmazione Java (OOP) e 
-            Tailwind come framework CSS e successivamente mi concentrerò sul framework
-            di Java Spring
+            Focus on:
         </div>
     </section>
     <!-- end fourth section what im focus on-->
@@ -190,7 +198,7 @@ import { EffectCards } from 'swiper/modules';
 }
 
 .swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
+    border:1px solid black;
 }
 
 .swiper-slide:nth-child(2n) {
