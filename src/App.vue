@@ -30,7 +30,7 @@
 	<div class="container">
 		<AppMain/>
 	</div>
-	<div class="container">
+	<div>
 		<AppFooter/>
 	</div>
 </template>
