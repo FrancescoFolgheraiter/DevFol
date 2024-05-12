@@ -1,4 +1,16 @@
 <script>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+
+import 'swiper/css/effect-cards';
+
+
+
+// import required modules
+import { EffectCards } from 'swiper/modules';
 
     export default{
         data(){
@@ -51,16 +63,23 @@
 		    }
         },
         components:{
-
+            Swiper,
+            SwiperSlide,
         },
         mounted(){
+        },
+        setup() {
+        return {
+            modules: [EffectCards],
+        };
         }
     }
 </script>
 
 <template>
-    <section class="grid grid-cols-2 gap-4 mb-4">
-        <div class="bg-gray-200 p-4 text-center">
+    <!--first section with my photo-->
+    <section class="grid grid-cols-2 gap-4 mb-12">
+        <div class="bg-gray-200 p-4 text-center flex flex-col justify-center">
             <p>Ciao! Piacere di conoscerti 👋</p>
             <h1 class=" text-4xl font-bold text-right">
                 Sono Francesco, un full-stack <span class="text-orange-500">web developer</span> di Trento(IT).
@@ -77,9 +96,22 @@
             <!--end polaroid-->
         </div>
     </section>
-    <section class="grid grid-cols-2 gap-4 mb-4">
+    <!--end first section with my photo-->
+    <!--second section my bio-->
+    <section class="grid grid-cols-2 gap-4 mb-12">
         <div class="bg-gray-200 p-4 text-center">
-            Swiper di immagini https://codesandbox.io/p/devbox/swiper-vue-effect-cards-rdjk7c?file=%2Fsrc%2FApp.vue%3A12%2C40
+            <swiper
+                :effect="'cards'"
+                :grabCursor="true"
+                :modules="modules"
+                class="mySwiper"
+            >
+                <swiper-slide>Slide 1</swiper-slide>
+                <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
+                <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
+                <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
+                <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+            </swiper>
         </div>
         <div class="bg-gray-200 p-4 text-center text-xl ">
             <div>
@@ -88,28 +120,34 @@
             </div>
             <div>
                 <!--testo-->
-                <p class=" mb-4">
+                <p class="mb-4">
                     Sono un giovane e appassionato web developer residente a Trento, amante del tech
                     e dello sport, pratico assiduamente da un paio d'anni l'arrampicata! &#129495;
                 </p>
-                <p class=" mb-4">
+                <p class="mb-4">
                     Nonostante venga da una formazione tecnica in ambito IT per diversi anni ho lavorato nel 
                     mondo della panificazione (un'altra mia passione), ma mi mancava il senso di sfida e la logica 
                     che il mondo della programmazione offre, quindi mi sono rimesso al passo coi tempi frequentando una 
                     tech academy di Milano! 
                 </p>
+                <p class="mb-4">
+                    A tenermi compagnia a casa oltre al codice ci sono 2 mice e una labrador!
+                    Minù (siamese), Hakuna (bengala) e Clover (30kg di energia allo stato puro! &#128514;) 
+                </p>
             </div>
         </div>
     </section>
-    <section class="grid grid-cols-2 gap-4 mb-4">
+    <!--end second section my bio-->
+    <!--third section knowledge -->
+    <section class="grid grid-cols-2 gap-4 mb-12">
         <div class="bg-gray-200 p-4 text-center">
             knowledge
         </div>
         <div class="bg-gray-200 p-4 ">
             <!--My card technology-->
             <ul class="grid grid-cols-3 gap-4 ">
-                <li v-for="(technology, i) in technologies" :key="i" class="min-h-[120px] border-2 border-green-800 rounded flex flex-col items-center justify-around ring-4 ring-lime-500 bg-gradient-to-bl from-green-400 to-green-100 ">
-                    <div class=" text-lg font-semibold text-slate-600 ">
+                <li v-for="(technology, i) in technologies" :key="i" class="hover:bg-white min-h-[120px] border-2 border-green-800 rounded flex flex-col items-center justify-around ring-4 ring-lime-500 bg-gradient-to-bl from-green-400 to-green-100 ">
+                    <div class=" text-lg font-semibold text-slate-600">
                         {{ technology.name }}
                     </div>
                     <div class=" w-[50px]">
@@ -120,17 +158,77 @@
             <!--end card tech-->
         </div>
     </section>
-    <section class="grid grid-cols-2 gap-4 mb-4">
+    <!--end third section knowledge -->
+    <!--fourth section what im focus on-->
+    <section class="grid grid-cols-2 gap-4 mb-12">
         <div class="bg-gray-200 p-4 text-center">
             Focus on:
         </div>
         <div class="bg-gray-200 p-4 text-center">
-            Sto studiando Java con i 
+            In questo periodo sto studiando linguaggio di programmazione Java (OOP) e 
+            Tailwind come framework CSS e successivamente mi concentrerò sul framework
+            di Java Spring
         </div>
     </section>
+    <!-- end fourth section what im focus on-->
 </template>
 
 <style scoped>
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+}
+
 
 
 </style>
