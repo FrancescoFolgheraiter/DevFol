@@ -78,7 +78,7 @@ import { EffectCards } from 'swiper/modules';
 
 <template>
     <!--first section with my photo-->
-    <section class="grid grid-cols-2 gap-4 mb-12">
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
         <div class="bg-gray-200 p-4 text-center flex flex-col justify-center">
             <p>Ciao! Piacere di conoscerti 👋</p>
             <h1 class=" text-4xl font-bold text-right">
@@ -98,7 +98,7 @@ import { EffectCards } from 'swiper/modules';
     </section>
     <!--end first section with my photo-->
     <!--second section my bio-->
-    <section class="grid grid-cols-2 gap-4 mb-12">
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
         <div class="bg-gray-200 p-4 text-center">
             <swiper
                 :effect="'cards'"
@@ -158,7 +158,7 @@ import { EffectCards } from 'swiper/modules';
     </section>
     <!--end second section my bio-->
     <!--third section knowledge -->
-    <section class="grid grid-cols-2 gap-4 mb-12">
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
         <div class="bg-gray-200 p-4 text-center">
             knowledge
         </div>
@@ -179,7 +179,7 @@ import { EffectCards } from 'swiper/modules';
     </section>
     <!--end third section knowledge -->
     <!--fourth section what im focus on-->
-    <section class="grid grid-cols-2 gap-4 mb-12">
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
         <div class="bg-gray-200 p-4 text-center">
             <p>
                 In questo periodo i miei studi si stanno principalmente
@@ -214,37 +214,13 @@ import { EffectCards } from 'swiper/modules';
   color: #fff;
 }
 
-.swiper-slide:nth-child(1n) {
-    border:1px solid black;
+.swiper-slide {
+    border:3px solid black;
 }
 
 
-.swiper-slide:nth-child(2n) {
+/* .swiper-slide:nth-child(1n) {
   background-color: rgb(0, 140, 255);
-}
-
-.swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
-}
-
-.swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
-}
-
-.swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
-}
-
-.swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
-}
-
-.swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
-}
-
-.swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
-}
+} */
 
 </style>
