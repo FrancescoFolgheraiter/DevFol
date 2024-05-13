@@ -79,13 +79,13 @@ import { EffectCards } from 'swiper/modules';
 <template>
     <!--first section with my photo-->
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-        <div class="bg-gray-200 p-4 text-center flex flex-col justify-center">
+        <div class=" p-4 text-center flex flex-col justify-center">
             <p>Ciao! Piacere di conoscerti 👋</p>
             <h1 class=" text-4xl font-bold text-right">
                 Sono Francesco, un full-stack <span class="text-orange-500">web developer</span> di Trento(IT).
             </h1>
         </div>
-        <div class="bg-gray-200 p-4 text-center flex justify-center">
+        <div class=" p-4 text-center flex justify-center">
             <!--polaroid-->
             <div class="p-3 max-w-[300px] rotate-12 m-12 border-4 border-black shadow-black shadow-xl bg-white">
                 <img class="w-full border-4 border-black" :src="getImagePath('/img/photo/Franz.jpg')" alt="FrancescoFolgheraiter">
@@ -99,7 +99,7 @@ import { EffectCards } from 'swiper/modules';
     <!--end first section with my photo-->
     <!--second section my bio-->
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-        <div class="bg-gray-200 p-4 text-center">
+        <div class=" p-4 text-center">
             <swiper
                 :effect="'cards'"
                 :grabCursor="true"
@@ -132,7 +132,7 @@ import { EffectCards } from 'swiper/modules';
                 </swiper-slide>
             </swiper>
         </div>
-        <div class="bg-gray-200 p-4 text-center text-xl ">
+        <div class=" p-4 text-center text-xl">
             <div>
                 <!--grafica-->
 
@@ -159,13 +159,13 @@ import { EffectCards } from 'swiper/modules';
     <!--end second section my bio-->
     <!--third section knowledge -->
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-        <div class="bg-gray-200 p-4 text-center">
+        <div class=" p-4 text-center">
             knowledge
         </div>
-        <div class="bg-gray-200 p-4 ">
+        <div class=" p-4 ">
             <!--My card technology-->
             <ul class="grid grid-cols-3 gap-4 ">
-                <li v-for="(technology, i) in technologies" :key="i" class="hover:bg-white min-h-[120px] border-2 border-green-800 rounded flex flex-col items-center justify-around ring-4 ring-lime-500 bg-gradient-to-bl from-green-400 to-green-100 ">
+                <li v-for="(technology, i) in technologies" :key="i" class="hover:bg-white min-h-[120px] rounded flex flex-col items-center justify-around ring-2 ring-[#303534] bg-gradient-to-bl from-[#DEFF83] to-green-100 ">
                     <div class=" text-lg font-semibold text-slate-600">
                         {{ technology.name }}
                     </div>
@@ -180,18 +180,18 @@ import { EffectCards } from 'swiper/modules';
     <!--end third section knowledge -->
     <!--fourth section what im focus on-->
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-        <div class="bg-gray-200 p-4 text-center">
-            <p>
+        <div class=" p-4 text-center text-xl">
+            <p class="mb-4">
                 In questo periodo i miei studi si stanno principalmente
                 concentrando sul linguaggio di programmazione Java (OOP) e 
                 Tailwind come framework CSS e successivamente mi concentrerò sul framework
                 di Java Spring.
             </p>
-            <p>
+            <p class="mb-4">
                 Con tailwild è stato amore a prima vista!
             </p>    
         </div>
-        <div class="bg-gray-200 p-4 text-center">
+        <div class=" p-4 text-center">
             Focus on:
         </div>
     </section>

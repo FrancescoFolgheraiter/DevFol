@@ -21,7 +21,7 @@
 
 <template>
     <nav class = "flex ">
-        <div class="flex-grow h-[80px]">
+        <div class="flex-grow h-[100px]">
             <router-link :to="{name:'home'}">
                 <img class=" h-full" :src="getImagePath('/img/LogoFrancescoFolgheraiter.png')" alt="">
             </router-link>
