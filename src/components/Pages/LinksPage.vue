@@ -73,7 +73,7 @@
             </h3>
             <ul>
                 <a v-for="link in myLinks" :href= "link.path" target="_blank" rel="noopener noreferrer">
-                    <li class="transition-move-up hover-move-up border-2 border-black mb-10 text-center py-4 rounded-xl shadow-2xl hover:bg-slate-500">
+                    <li class="transition-move-up hover-move-up border-2 border-black mb-10 text-center py-4 rounded-xl shadow-xl hover:bg-slate-500">
                         {{ link.name }}
                     </li>
                 </a>
@@ -87,7 +87,7 @@
             </h3>
             <ul>
                 <a v-for="link in docLibrary" :href= "link.path" target="_blank" rel="noopener noreferrer">
-                    <li class="transition-move-up hover-move-up border-2 border-black mb-10 text-center py-4 rounded-xl shadow-2xl hover:bg-slate-500">
+                    <li class="transition-move-up hover-move-up border-2 border-black mb-10 text-center py-4 rounded-xl shadow-xl hover:bg-slate-500">
                         {{ link.name }}
                     </li>
                 </a>
