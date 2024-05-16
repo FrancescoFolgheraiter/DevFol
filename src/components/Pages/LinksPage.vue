@@ -55,10 +55,12 @@
 </script>
 
 <template>
-    <!--first section with my photo-->
-    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-
-    </section>
+    <div class="w-1/2 flex justify-center">
+        <!--first section with my photo-->
+        <section class="grid grid-cols-1 bg-red-400 ">
+            Mia foto
+        </section>
+    </div>
 </template>
 
 <style scoped>
