@@ -55,14 +55,54 @@
 </script>
 
 <template>
-    <div class="w-1/2 flex justify-center">
+    <div class="container w-1/3">
         <!--first section with my photo-->
-        <section class="grid grid-cols-1 bg-red-400 ">
-            Mia foto
+        <section class="flex flex-col items-center mb-12">
+            <div>
+                <img class="w-28 h-28 sm:w-[150px] sm:h-[150px] object-cover rounded-full ring-2 ring-[#303534]" :src="getImagePath('/img/photo/Franz.jpg')" alt="FrancescoFolgheraiter">
+            </div>
+            <h1 class=" text-xl font-bold">
+                Francesco Folgheraiter
+            </h1>
         </section>
+        <!--end first section with my photo-->
+        <!--section personal links-->
+        <section>
+            <h3 class="font-bold text-center mb-10">
+                I miei profili social:
+            </h3>
+            <ul>
+                <a v-for="link in myLinks" :href= "link.path" target="_blank" rel="noopener noreferrer">
+                    <li class="transition-move-up hover-move-up border-2 border-black mb-10 text-center py-4 rounded-xl shadow-2xl hover:bg-slate-500">
+                        {{ link.name }}
+                    </li>
+                </a>
+            </ul>   
+        </section>
+        <!--end section personal links-->
+        <!--third section library links-->
+        <section>
+            <h3 class="font-bold text-center mb-10">
+                Alcune librerie che ho implementato nei miei progetti:
+            </h3>
+            <ul>
+                <a v-for="link in docLibrary" :href= "link.path" target="_blank" rel="noopener noreferrer">
+                    <li class="transition-move-up hover-move-up border-2 border-black mb-10 text-center py-4 rounded-xl shadow-2xl hover:bg-slate-500">
+                        {{ link.name }}
+                    </li>
+                </a>
+            </ul>   
+        </section>
+        <!--third section library links-->
     </div>
 </template>
 
 <style scoped>
+.transition-move-up {
+  @apply transition-transform duration-100 ease-in-out;
+}
+.hover-move-up:hover {
+  @apply transform -translate-y-2;
+}
 
 </style>
