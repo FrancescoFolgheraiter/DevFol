@@ -151,7 +151,7 @@ import { EffectCards } from 'swiper/modules';
                 </p>
                 <p class="mb-4">
                     A tenermi compagnia a casa oltre al codice ci sono 2 mice e una labrador!
-                    Minù (siamese), Hakuna (bengala) e Clover (30kg di energia allo stato puro! &#128514;) 
+                    Minou (siamese), Hakuna (bengala) e Clover (30kg di energia allo stato puro! &#128514;) 
                 </p>
             </div>
         </div>
@@ -167,7 +167,7 @@ import { EffectCards } from 'swiper/modules';
         </div>
         <div class=" p-4 ">
             <!--My card technology-->
-            <ul class="grid grid-cols-3 gap-4 ">
+            <ul class="grid grid-cols-3 gap-4 mb-2">
                 <li v-for="(technology, i) in technologies" :key="i" class="hover:bg-white min-h-[120px] rounded flex flex-col items-center justify-around ring-2 ring-[#303534] bg-gradient-to-bl from-[#DEFF83] to-green-100 ">
                     <div class=" text-lg font-semibold text-slate-600">
                         {{ technology.name }}
@@ -178,6 +178,9 @@ import { EffectCards } from 'swiper/modules';
                 </li>
             </ul>
             <!--end card tech-->
+            <p class="text-center">
+                Vieni a scoprire come utilizzo queste tencologie nella mia pagina progetti oppure se sei del settore visita il mio profilo github!
+            </p>
         </div>
     </section>
     <!--end third section knowledge -->
@@ -192,7 +195,7 @@ import { EffectCards } from 'swiper/modules';
             </p>
             <p class="mb-4">
                 Con tailwild è stato amore a prima vista!
-            </p>    
+            </p>   
         </div>
         <div class=" p-4 text-center ">
             

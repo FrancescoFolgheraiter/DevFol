@@ -15,7 +15,7 @@
 <template>
     <div class=" min-h-[300px] bg-slate-900 text-white">
         <div class="grid grid-cols-1 sm:grid-cols-4 gap-12 text-center container">
-            <div class="flex-grow h-[100px]">
+            <div class="flex-grow h-[75px]">
             <router-link :to="{name:'home'}">
                 <img class=" h-full" :src="getImagePath('/img/LogoFrancescoFolgheraiter.png')" alt="">
             </router-link>
