@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './src/components/Pages/HomePage.vue';
+import LinksPage from  './src/components/Pages/LinksPage.vue';
 // import IndexPage from './src/components/pages/indexPage.vue';
 // import RestaurantPage from './src/components/pages/RestaurantPage.vue';
 // import PaymentPage from './src/components/pages/PaymentPage.vue';
@@ -15,6 +16,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomePage 
+    },
+    {
+      path: '/links',
+      name: 'links',
+      component: LinksPage 
     }
   ]
 });
