@@ -3,10 +3,22 @@
         data(){
             return{
                 navHeader:[
-                    "about",
-                    "blog",
-                    "links",
-                    "project"
+                    {
+                        name:"about",
+                        component:null,
+                    },
+                    {
+                        name:"blog",
+                        component:null,
+                    },
+                    {
+                        name:"links",
+                        component:'links',
+                    },
+                    {
+                        name:"project",
+                        component:null,
+                    }
                 ],
         };
         },
@@ -29,7 +41,9 @@
         <div class="flex items-center">
             <ul class="border-2 border-black rounded-full flex">
                 <li v-for="link in navHeader" class="mx-5 my-3 hover:font-bold">
-                    {{ link }}
+                    <router-link :to="(link.component != null) ? {name:link.component } : {name:'home'}">
+                        {{ link.name }}
+                    </router-link>
                 </li>
             </ul>
         </div>
