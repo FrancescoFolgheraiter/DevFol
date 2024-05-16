@@ -159,8 +159,11 @@ import { EffectCards } from 'swiper/modules';
     <!--end second section my bio-->
     <!--third section knowledge -->
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-        <div class=" p-4 text-center">
-            knowledge
+        <div class=" p-4 text-center text-2xl flex flex-col  justify-center">
+            <div v-for="elem in 'knowledge'">
+                    {{ elem.toUpperCase() }}
+                </div>
+            
         </div>
         <div class=" p-4 ">
             <!--My card technology-->
@@ -191,8 +194,8 @@ import { EffectCards } from 'swiper/modules';
                 Con tailwild è stato amore a prima vista!
             </p>    
         </div>
-        <div class=" p-4 text-center">
-            Focus on:
+        <div class=" p-4 text-center ">
+            
         </div>
     </section>
     <!-- end fourth section what im focus on-->
