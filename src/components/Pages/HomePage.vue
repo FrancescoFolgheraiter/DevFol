@@ -151,8 +151,8 @@ import { EffectCards } from 'swiper/modules';
                         tech academy di Milano! 
                     </p>
                     <p class="mb-4">
-                        A tenermi compagnia a casa oltre al codice ci sono 2 mice e una labrador!
-                        Minou (siamese), Hakuna (bengala) e Clover (30kg di energia allo stato puro! &#128514;) 
+                        A tenermi compagnia a casa oltre al codice ci sono 2 mice e una Labrador!
+                        Minou (Sacro di Birmania), Hakuna (Bengala) e Clover (30kg di energia allo stato puro! &#128514;) 
                     </p>
                 </div>
             </div>
