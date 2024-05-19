@@ -24,15 +24,15 @@
 </script>
 
 <template>
-	<div class="container my-3" >
-		<AppHeader/>
-	</div>
-	<div class="container">
-		<AppMain/>
-	</div>
-	<div>
-		<AppFooter/>
-	</div>
+
+    <AppHeader/>
+
+
+    <AppMain/>
+
+
+    <AppFooter/>
+
 </template>
 
 <style scoped>
