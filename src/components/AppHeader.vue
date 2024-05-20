@@ -5,7 +5,7 @@
                 navHeader:[
                     {
                         name:"about",
-                        component:null,
+                        component:"about",
                     },
                     {
                         name:"blog",
