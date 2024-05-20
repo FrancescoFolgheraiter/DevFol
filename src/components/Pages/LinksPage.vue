@@ -62,16 +62,19 @@
     <div class="container w-1/3">
         <!--first section with my photo-->
         <section class="flex flex-col items-center mb-12">
-            <div>
+            <div class="m-5">
                 <img class="w-28 h-28 sm:w-[150px] sm:h-[150px] object-cover rounded-full ring-2 ring-[#303534]" :src="getImagePath('/img/photo/Franz.jpg')" alt="FrancescoFolgheraiter">
             </div>
-            <h1 class=" text-xl font-bold mb-10">
+            <h1 class=" text-xl font-bold">
                 Francesco Folgheraiter
             </h1>
+            <h2 class=" text-lg mb-10">
+                francesco.folgheraiter92@gmail.com
+            </h2>
             <h3 class="font-bold text-center mb-10">
                 Mandami una email:
             </h3>
-            <button @click="openMailClient" class="transition-move-up hover-move-up border-2 border-black mb-10 text-center py-4 rounded-xl shadow-xl hover:bg-slate-500 w-full">
+            <button @click="openMailClient" class="transition-move-up hover-move-up border-2 border-black text-center py-4 rounded-xl shadow-xl hover:bg-slate-500 w-full">
             Contattami
             </button>
         </section>
